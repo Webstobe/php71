@@ -20,7 +20,8 @@ RUN apt-get update && \
         vim \
         git \
         unzip \
-        zip
+        zip \
+        ssh
 # 07 Install required 3rd party tools
 RUN apt-get install -y \
         libxml2-dev libfreetype6-dev \
@@ -42,7 +43,7 @@ RUN apt-get install -y \
         zlib1g-dev && \
     rm -rf /var/lib/apt/lists/* /usr/src/*
 # 08 configure Apache
-RUN a2enmod rewrite
+RUN a2enmod rewrite ssl proxy proxy_http
 
 # 09 install composer globally - the ENV variables are already set:
 COPY --from=composer /usr/bin/composer /usr/bin/composer

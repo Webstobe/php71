@@ -3,6 +3,7 @@
 overview
 ------------
 - based on php:7.1-apache
+- SSL-enabled
 - composer from official image
 - additional tools:
   - wget
@@ -13,3 +14,4 @@ overview
   - rsync
   - graphicsmagick
   - mysql-client
+  - ssh
