@@ -3,6 +3,13 @@
 # change directory:
 cd /var/www
 
+# make sure mySQL-DB is ready:
+while [[ -z $(mysql -hmysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD"  <<< status)  ]]; do
+    echo "waiting for mySQl-Server..."
+    sleep 2
+done
+
+
 # only if /Localconfiguration.php is not already present:
 if  [ ! -f "./web/typo3conf/LocalConfiguration.php" ];
     then
