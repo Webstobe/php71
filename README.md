@@ -18,3 +18,6 @@ overview
   - graphicsmagick
   - mysql-client
   - ssh
+
+2019-02-23
+drop auto-import of DB to avoid interference with composer-scripts and manual migrations
