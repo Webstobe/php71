@@ -18,6 +18,10 @@ overview
   - graphicsmagick
   - mysql-client
   - ssh
+  - jpegoptim
+  - optipng
+  - gifsicle
+  - poppler-utils (pdftotext / pdftohtml ...)
 
 2019-02-23
 drop auto-import of DB to avoid interference with composer-scripts and manual migrations
